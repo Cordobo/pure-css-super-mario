@@ -1,0 +1,277 @@
+/*------------------------------------------------------------------
+[CSS3 Stylesheet]
+
+Project: CSS 4D - CSS Animation Core
+Last change: 01. May 2014
+Designed by: Andreas Jacob, http://cordobo.com/
+Works in browsers: Safari 5+, Google Chrome 12+
+-------------------------------------------------------------------*/
+
+/*
+
+  This is an ALPHA
+  Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
+  
+  Supported Browsers are Apple Safari 5 and Chrome 14+
+
+*/
+
+
+
+.wrapper {
+  height: 224px;
+  padding: 30px;
+  position: relative;
+  width: 224px;
+}
+
+.wrapper:hover {
+  opacity: 0.6;
+
+  -moz-perspective: 200px;
+  -moz-perspective-origin: 100px 100px;
+  -moz-transition: all 1s ease-in-out;
+  -moz-transform-style: preserve-3d;
+  
+  -webkit-perspective: 200;
+  -webkit-transition: all 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  
+  /*
+  perspective: 200;
+  perspective-origin: 150 150;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+  */
+
+}
+
+.wrapper:hover div > div {
+	border: 1px solid #ddd;
+}
+
+.wrapper p {
+	margin: auto 0;
+}
+
+#parent {
+  height: 224px;
+  margin: 0;
+  width: 224px;
+}
+
+#mario-retro-icon,
+#mario-retro-icon div { position: absolute; }
+
+
+#mario-retro-icon {
+  height: 224px;
+  width: 224px;
+
+  -moz-animation: spin 6s infinite linear;
+  -moz-transform-origin: (50% 50% 0);
+  -moz-backface-visibility: visible;
+  -moz-transform-style: preserve-3d;
+
+  -webkit-animation: spin 6s infinite linear;
+  -webkit-transform-origin: (50% 50% 0);
+  -webkit-backface-visibility: visible;
+  -webkit-transform-style: preserve-3d;
+
+  animation: spin 6s infinite linear;
+  transform-origin: (50% 50% 0);
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+
+}
+
+#mario-retro-icon:hover {
+  -moz-animation: hoverSpin 6s infinite linear;
+  -webkit-animation: hoverSpin 6s infinite linear;
+  animation: hoverSpin 6s infinite linear;
+}
+
+#mario-retro-icon div {
+  -moz-transform-style: preserve-3d;
+}
+
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotateY(0); }
+  to   { -moz-transform: rotateY(360deg); }
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotateY(0); }
+  to   { -webkit-transform: rotateY(360deg); }
+}
+
+@-ms-keyframes spin {
+  from { -ms-transform: rotateY(0); }
+  to   { -ms-transform: rotateY(360deg); }
+}
+
+@keyframes spin {
+  from { transform: rotateY(0); }
+  to   { transform: rotateY(360deg);}
+}
+
+
+@-moz-keyframes hoverSpin {
+  from { -moz-transform: rotateX(0) rotateY(0) rotateZ(0); }
+  to   { -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@-webkit-keyframes hoverSpin {
+  from { -webkit-transform: rotateX(0) rotateY(0) rotateZ(0); }
+  to   { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg); }
+}
+
+@-ms-keyframes hoverSpin {
+  from { -ms-transform: rotateZ(0); }
+  to   { -ms-transform: rotateZ(360deg); }
+}
+
+@keyframes hoverSpin {
+  from { transform: rotateZ(0); }
+  to   { transform: rotateZ(360deg);}
+}
+
+
+/*
+@-moz-keyframes hoverSpin,
+@-webkit-keyframes hoverSpin,
+@-ms-keyframes hoverSpin,
+@keyframes hoverSpin {
+  from {
+  	-moz-transform: rotateZ(0);
+  	-webkit-transform: rotateZ(0);
+  	-ms-transform: rotateZ(0);
+  	}
+  to   {
+  	-moz-transform: rotateZ(360deg);
+  	-webkit-transform: rotateZ(360deg);
+  	-ms-transform: rotateZ(360deg);
+  	}
+}
+*/
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*
+
+CSS 4D Framework by Andreas Jacob
+Author URL: http://cordobo.com/
+
+V 0.2 (Alpha)
+02/28/2013
+
+
+A small CSS framework to create 3D animations with CSS
+
+*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Repetitions
+@iterations: 15;
+
+// Size used for FONTS and 
+@baseSize: 14px;
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/**
+  * The place where the magic starts
+  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@b: @baseSize;
+@i: @iterations;
+// @c: class name prefix
+// @m: multiplier - has no value
+
+// loopSelector
+.ls (h) {
+  height: @b * @m;
+}
+
+.ls (l) {
+  left: @b * @m;
+}
+
+.ls (t) {
+  top: @b * @m;
+}
+
+.ls (w) {
+  width: @b * @m;
+}
+
+.ls (tx) {
+  -moz-transform: translateX(@b * @m);
+  -webkit-transform: translateX(@b * @m);
+  transform: translateX(@b * @m);
+}
+
+.ls (ty) {
+  -moz-transform: translateY(@b * @m);
+  -webkit-transform: translateY(@b * @m);
+  transform: translateY(@b * @m);
+}
+
+.ls (tz) {
+  -moz-transform: translateZ(@b * @m);
+  -webkit-transform: translateZ(@b * @m);
+  transform: translateZ(@b * @m);
+}
+
+
+/* This little sucker is the LOOP, culprit of all generated classes */
+.loop (@c) {
+// helper class, will never show up in resulting css
+// will be called as long as @m is > -(@i + 1 )
+    .loopHelper (@m) when (@m > -(@i + 1)) {
+        // create the css selector
+        (~".@{c}@{m}") {
+          .ls (@c);
+        }
+        // next iteration
+        .loopHelper (@m - 1);
+    }
+// end the loop when @m is > -(@i + 1 )
+    .loopHelper (@i) { }
+// "call" the loop with the initial value of @i
+    .loopHelper (@i);
+}
+
+
+/* Height = h */
+.loop (h);
+/* Left = l */
+.loop (l);
+/* top = t */
+.loop (t);
+/* Width = w */
+.loop (w);
+/* Translate X */
+.loop (tx);
+/* Translate Y */
+.loop (ty);
+/* Translate Z */
+.loop (tz);
+
+
+
+.rot0 { -moz-transform: rotateY(0deg); -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+.rot90 { -moz-transform: rotateY(90deg); -webkit-transform: rotateY(90deg); transform: rotateY(90deg); }
+.rot-90 { -moz-transform: rotateY(-90deg); -webkit-transform: rotateY(-90deg); transform: rotateY(-90deg); }
+.rot180 { -moz-transform: rotateY(180deg); -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+
+
+/* Orange, Skin color, Green, DEBUG (yellow, pink) */
+.o { background-color: #fe3000; }
+.s { background-color: #feb644; }
+.g  { background-color: #a48b00; }
+.y { background-color: yellow; } /*  DEBUG */
+.pink { background-color: pink; } /*  DEBUG */

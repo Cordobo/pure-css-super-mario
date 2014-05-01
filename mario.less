@@ -1,0 +1,138 @@
+/*------------------------------------------------------------------
+[CSS3 Stylesheet]
+
+Project: A Pure CSS3 animated 3D Super Mario Retro Icon without images
+Last change: 01. May 2014
+Designed by: Andreas Jacob, http://cordobo.com/
+Works in browsers: Safari 5+, Google Chrome 12
+-------------------------------------------------------------------*/
+
+/*
+
+  A Pure CSS3 animated 3D Super Mario Retro Icon without images
+  Built on top of the "CSS 4D Framework" by Andreas Jacob
+
+  This is an ALPHA
+  Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
+  
+  Supported Browsers are Apple Safari 5 and Chrome 14+
+
+*/
+
+
+body {
+	background-color: #3377D3;
+	color: #fff;
+	font: 100.1%/1.5 "Gill Sans MT", Calibri, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 100px;
+}
+
+h1 {
+	color: #fff;
+	font-size: 4em;
+  font-style: normal;
+  line-height: 1.1;
+	margin: 80px 0 0;
+}
+
+h2 {
+  color: rgba(255,255,255,0.6);
+	font-size: 1.5em;
+  line-height: 1.5;
+	font-style: normal;
+}
+
+span.amp {
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+sup,
+small { font-size: 0.8em; }
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    color: #eee;
+
+    #note & {
+      color: #969BA2;
+      border-bottom: 1px solid #ddd;
+    }
+
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    
+    border-bottom: 1px solid #fff;
+    color: #fff;
+
+    #note & {
+      border-bottom: 1px solid #aaa;
+      color: #FE3000;
+    }
+
+    h2 & {
+
+      color: #FE3000;
+    }
+
+  }
+}
+
+header,
+article,
+footer {
+  margin: 0 auto;
+}
+
+
+#bottom,
+#top,
+.wrapper { margin: 0 auto; }
+
+#bottom,
+#top { width: 700px; }
+
+#content {
+  padding: 1em;
+  text-align: center;
+}
+
+#subtext {
+  line-height: 100px;
+  margin: 0 auto;
+}
+
+#note {
+  background-color: #EEF2F5;
+  bottom: 0;
+  color: #bbb;
+  height: 80px;
+  left: 0;
+
+  position: fixed;
+  width: 100%;
+
+  .container {
+    margin: 0 auto;
+    padding: 28px 0;
+    width: 700px;
+  }
+
+}
+
+#note div.read { float: left; }
+#note .right { float: right; }
+
+
+
+@import "css4d.less";
