@@ -4,45 +4,43 @@
 Project: CSS 4D - CSS Animation Core
 Last change: 01. May 2014
 Designed by: Andreas Jacob, http://cordobo.com/
-Works in browsers: Safari 5+, Google Chrome 12+
+Supported Browsers: Safari 5+, Google Chrome 14+
 -------------------------------------------------------------------*/
 
 /*
 
-  This is an ALPHA
-  Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
-  
-  Supported Browsers are Apple Safari 5 and Chrome 14+
+	This is an ALPHA
+	Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
 
 */
 
 
 
 .wrapper {
-  height: 224px;
-  padding: 30px;
-  position: relative;
-  width: 224px;
+	height: 224px;
+	padding: 30px;
+	position: relative;
+	width: 224px;
 }
 
 .wrapper:hover {
-  opacity: 0.6;
+	opacity: 0.6;
 
-  -moz-perspective: 200px;
-  -moz-perspective-origin: 100px 100px;
-  -moz-transition: all 1s ease-in-out;
-  -moz-transform-style: preserve-3d;
-  
-  -webkit-perspective: 200;
-  -webkit-transition: all 1s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-  
-  /*
-  perspective: 200;
-  perspective-origin: 150 150;
-  transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
-  */
+	-moz-perspective: 200px;
+	-moz-perspective-origin: 100px 100px;
+	-moz-transition: all 1s ease-in-out;
+	-moz-transform-style: preserve-3d;
+	
+	-webkit-perspective: 200;
+	-webkit-transition: all 1s ease-in-out;
+	-webkit-transform-style: preserve-3d;
+	
+	/*
+	perspective: 200;
+	perspective-origin: 150 150;
+	transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	*/
 
 }
 
@@ -55,9 +53,9 @@ Works in browsers: Safari 5+, Google Chrome 12+
 }
 
 #parent {
-  height: 224px;
-  margin: 0;
-  width: 224px;
+	height: 224px;
+	margin: 0;
+	width: 224px;
 }
 
 #mario-retro-icon,
@@ -65,76 +63,76 @@ Works in browsers: Safari 5+, Google Chrome 12+
 
 
 #mario-retro-icon {
-  height: 224px;
-  width: 224px;
+	height: 224px;
+	width: 224px;
 
-  -moz-animation: spin 6s infinite linear;
-  -moz-transform-origin: (50% 50% 0);
-  -moz-backface-visibility: visible;
-  -moz-transform-style: preserve-3d;
+	-moz-animation: spin 6s infinite linear;
+	-moz-transform-origin: (50% 50% 0);
+	-moz-backface-visibility: visible;
+	-moz-transform-style: preserve-3d;
 
-  -webkit-animation: spin 6s infinite linear;
-  -webkit-transform-origin: (50% 50% 0);
-  -webkit-backface-visibility: visible;
-  -webkit-transform-style: preserve-3d;
+	-webkit-animation: spin 6s infinite linear;
+	-webkit-transform-origin: (50% 50% 0);
+	-webkit-backface-visibility: visible;
+	-webkit-transform-style: preserve-3d;
 
-  animation: spin 6s infinite linear;
-  transform-origin: (50% 50% 0);
-  backface-visibility: visible;
-  transform-style: preserve-3d;
+	animation: spin 6s infinite linear;
+	transform-origin: (50% 50% 0);
+	backface-visibility: visible;
+	transform-style: preserve-3d;
 
 }
 
 #mario-retro-icon:hover {
-  -moz-animation: hoverSpin 6s infinite linear;
-  -webkit-animation: hoverSpin 6s infinite linear;
-  animation: hoverSpin 6s infinite linear;
+	-moz-animation: hoverSpin 6s infinite linear;
+	-webkit-animation: hoverSpin 6s infinite linear;
+	animation: hoverSpin 6s infinite linear;
 }
 
 #mario-retro-icon div {
-  -moz-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
 }
 
 
 @-moz-keyframes spin {
-  from { -moz-transform: rotateY(0); }
-  to   { -moz-transform: rotateY(360deg); }
+	from { -moz-transform: rotateY(0); }
+	to   { -moz-transform: rotateY(360deg); }
 }
 
 @-webkit-keyframes spin {
-  from { -webkit-transform: rotateY(0); }
-  to   { -webkit-transform: rotateY(360deg); }
+	from { -webkit-transform: rotateY(0); }
+	to   { -webkit-transform: rotateY(360deg); }
 }
 
 @-ms-keyframes spin {
-  from { -ms-transform: rotateY(0); }
-  to   { -ms-transform: rotateY(360deg); }
+	from { -ms-transform: rotateY(0); }
+	to   { -ms-transform: rotateY(360deg); }
 }
 
 @keyframes spin {
-  from { transform: rotateY(0); }
-  to   { transform: rotateY(360deg);}
+	from { transform: rotateY(0); }
+	to   { transform: rotateY(360deg);}
 }
 
 
 @-moz-keyframes hoverSpin {
-  from { -moz-transform: rotateX(0) rotateY(0) rotateZ(0); }
-  to   { -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+	from { -moz-transform: rotateX(0) rotateY(0) rotateZ(0); }
+	to   { -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
 }
 
 @-webkit-keyframes hoverSpin {
-  from { -webkit-transform: rotateX(0) rotateY(0) rotateZ(0); }
-  to   { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg); }
+	from { -webkit-transform: rotateX(0) rotateY(0) rotateZ(0); }
+	to   { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg); }
 }
 
 @-ms-keyframes hoverSpin {
-  from { -ms-transform: rotateZ(0); }
-  to   { -ms-transform: rotateZ(360deg); }
+	from { -ms-transform: rotateZ(0); }
+	to   { -ms-transform: rotateZ(360deg); }
 }
 
 @keyframes hoverSpin {
-  from { transform: rotateZ(0); }
-  to   { transform: rotateZ(360deg);}
+	from { transform: rotateZ(0); }
+	to   { transform: rotateZ(360deg);}
 }
 
 
@@ -143,16 +141,16 @@ Works in browsers: Safari 5+, Google Chrome 12+
 @-webkit-keyframes hoverSpin,
 @-ms-keyframes hoverSpin,
 @keyframes hoverSpin {
-  from {
-  	-moz-transform: rotateZ(0);
-  	-webkit-transform: rotateZ(0);
-  	-ms-transform: rotateZ(0);
-  	}
-  to   {
-  	-moz-transform: rotateZ(360deg);
-  	-webkit-transform: rotateZ(360deg);
-  	-ms-transform: rotateZ(360deg);
-  	}
+	from {
+		-moz-transform: rotateZ(0);
+		-webkit-transform: rotateZ(0);
+		-ms-transform: rotateZ(0);
+		}
+	to   {
+		-moz-transform: rotateZ(360deg);
+		-webkit-transform: rotateZ(360deg);
+		-ms-transform: rotateZ(360deg);
+		}
 }
 */
 
@@ -182,8 +180,8 @@ A small CSS framework to create 3D animations with CSS
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /**
-  * The place where the magic starts
-  */
+	* The place where the magic starts
+	*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 @b: @baseSize;
@@ -193,37 +191,37 @@ A small CSS framework to create 3D animations with CSS
 
 // loopSelector
 .ls (h) {
-  height: @b * @m;
+	height: @b * @m;
 }
 
 .ls (l) {
-  left: @b * @m;
+	left: @b * @m;
 }
 
 .ls (t) {
-  top: @b * @m;
+	top: @b * @m;
 }
 
 .ls (w) {
-  width: @b * @m;
+	width: @b * @m;
 }
 
 .ls (tx) {
-  -moz-transform: translateX(@b * @m);
-  -webkit-transform: translateX(@b * @m);
-  transform: translateX(@b * @m);
+	-moz-transform: translateX(@b * @m);
+	-webkit-transform: translateX(@b * @m);
+	transform: translateX(@b * @m);
 }
 
 .ls (ty) {
-  -moz-transform: translateY(@b * @m);
-  -webkit-transform: translateY(@b * @m);
-  transform: translateY(@b * @m);
+	-moz-transform: translateY(@b * @m);
+	-webkit-transform: translateY(@b * @m);
+	transform: translateY(@b * @m);
 }
 
 .ls (tz) {
-  -moz-transform: translateZ(@b * @m);
-  -webkit-transform: translateZ(@b * @m);
-  transform: translateZ(@b * @m);
+	-moz-transform: translateZ(@b * @m);
+	-webkit-transform: translateZ(@b * @m);
+	transform: translateZ(@b * @m);
 }
 
 
@@ -231,18 +229,18 @@ A small CSS framework to create 3D animations with CSS
 .loop (@c) {
 // helper class, will never show up in resulting css
 // will be called as long as @m is > -(@i + 1 )
-    .loopHelper (@m) when (@m > -(@i + 1)) {
-        // create the css selector
-        (~".@{c}@{m}") {
-          .ls (@c);
-        }
-        // next iteration
-        .loopHelper (@m - 1);
-    }
+		.loopHelper (@m) when (@m > -(@i + 1)) {
+				// create the css selector
+				(~".@{c}@{m}") {
+					.ls (@c);
+				}
+				// next iteration
+				.loopHelper (@m - 1);
+		}
 // end the loop when @m is > -(@i + 1 )
-    .loopHelper (@i) { }
+		.loopHelper (@i) { }
 // "call" the loop with the initial value of @i
-    .loopHelper (@i);
+		.loopHelper (@i);
 }
 
 

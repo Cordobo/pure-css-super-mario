@@ -4,17 +4,15 @@
 Project: A Pure CSS3 animated 3D Super Mario Retro Icon without images
 Last change: 01. May 2014
 Designed by: Andreas Jacob, http://cordobo.com/
-Works in browsers: Safari 5+, Google Chrome 12
+Supported Browsers: Safari 5+, Google Chrome 14+
 -------------------------------------------------------------------*/
 /*
 
-  A Pure CSS3 animated 3D Super Mario Retro Icon without images
-  Built on top of the "CSS 4D Framework" by Andreas Jacob
+	A Pure CSS3 animated 3D Super Mario Retro Icon without images
+	Built on top of the "CSS 4D Framework" by Andreas Jacob
 
-  This is an ALPHA
-  Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
-  
-  Supported Browsers are Apple Safari 5 and Chrome 14+
+	This is an ALPHA
+	Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
 
 */
 body {
@@ -125,14 +123,12 @@ footer {
 Project: CSS 4D - CSS Animation Core
 Last change: 01. May 2014
 Designed by: Andreas Jacob, http://cordobo.com/
-Works in browsers: Safari 5+, Google Chrome 12+
+Supported Browsers: Safari 5+, Google Chrome 14+
 -------------------------------------------------------------------*/
 /*
 
-  This is an ALPHA
-  Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
-  
-  Supported Browsers are Apple Safari 5 and Chrome 14+
+	This is an ALPHA
+	Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
 
 */
 .wrapper {
@@ -151,11 +147,11 @@ Works in browsers: Safari 5+, Google Chrome 12+
   -webkit-transition: all 1s ease-in-out;
   -webkit-transform-style: preserve-3d;
   /*
-  perspective: 200;
-  perspective-origin: 150 150;
-  transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
-  */
+	perspective: 200;
+	perspective-origin: 150 150;
+	transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	*/
 
 }
 .wrapper:hover div > div {
@@ -266,16 +262,16 @@ Works in browsers: Safari 5+, Google Chrome 12+
 @-webkit-keyframes hoverSpin,
 @-ms-keyframes hoverSpin,
 @keyframes hoverSpin {
-  from {
-  	-moz-transform: rotateZ(0);
-  	-webkit-transform: rotateZ(0);
-  	-ms-transform: rotateZ(0);
-  	}
-  to   {
-  	-moz-transform: rotateZ(360deg);
-  	-webkit-transform: rotateZ(360deg);
-  	-ms-transform: rotateZ(360deg);
-  	}
+	from {
+		-moz-transform: rotateZ(0);
+		-webkit-transform: rotateZ(0);
+		-ms-transform: rotateZ(0);
+		}
+	to   {
+		-moz-transform: rotateZ(360deg);
+		-webkit-transform: rotateZ(360deg);
+		-ms-transform: rotateZ(360deg);
+		}
 }
 */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -294,8 +290,8 @@ A small CSS framework to create 3D animations with CSS
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /**
-  * The place where the magic starts
-  */
+	* The place where the magic starts
+	*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* This little sucker is the LOOP, culprit of all generated classes */
 /* Height = h */
